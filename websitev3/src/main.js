@@ -209,11 +209,11 @@ function applyResponsiveLayout() {
   } else if (w >= 420) {
     cam = { x: 2.1, y: 2.6, z: 8.6, lx: 1.1, ly: 0, lz: 0, rubikX: 2.2 };
   } else {
-    cam = { x: 0.2, y: 2.4, z: 9.2, lx: 0.4, ly: 0, lz: 0, rubikX: 0.8 };
+    cam = { x: 0.0, y: 2.4, z: 9.2, lx: 0.0, ly: 0, lz: 0, rubikX: 0.0 };
   }
 
   if (isPortrait) {
-    cam = { x: 0.3, y: 2.7, z: 9.2, lx: 0.3, ly: 0, lz: 0, rubikX: 0.8 };
+    cam = { x: 0.0, y: 2.7, z: 9.2, lx: 0.0, ly: 0, lz: 0, rubikX: 0.0 };
   }
 
   setCamera(cam.x, cam.y, cam.z, cam.lx, cam.ly, cam.lz);

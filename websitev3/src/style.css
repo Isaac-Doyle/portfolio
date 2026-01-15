@@ -400,15 +400,52 @@ body {
 }
 
 @media (max-width: 600px) {
+  body {
+    scroll-snap-type: none;
+  }
+
+  .section {
+    padding: clamp(72px, 12vh, 110px) 6vw;
+  }
+
   #top-nav {
     padding: 12px 14px;
-    gap: 14px;
+    gap: 8px 16px;
+    flex-wrap: wrap;
+    justify-content: center;
     letter-spacing: 0.14em;
+    background: rgba(255, 255, 255, 0.96);
   }
 
   #social-icons {
-    top: 10px;
+    top: auto;
+    bottom: 14px;
     right: 12px;
+  }
+
+  #name-overlay {
+    width: 100%;
+    padding: 0 6vw;
+  }
+
+  #name-overlay .first {
+    font-size: clamp(64px, 20vw, 120px);
+  }
+
+  #name-overlay .last {
+    font-size: clamp(58px, 18vw, 108px);
+  }
+
+  #name-overlay .sub {
+    font-size: clamp(11px, 3vw, 15px);
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-preview {
+    aspect-ratio: 4 / 5;
   }
 }
 
@@ -421,6 +458,24 @@ body {
   .about-photo {
     width: min(240px, 100%);
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  #name-overlay {
+    left: 4vw;
+  }
+
+  #name-overlay .first {
+    font-size: clamp(84px, 14vw, 160px);
+  }
+
+  #name-overlay .last {
+    font-size: clamp(76px, 13vw, 150px);
+  }
+
+  #name-overlay .sub {
+    font-size: clamp(13px, 2vw, 18px);
   }
 }
 
