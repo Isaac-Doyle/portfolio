@@ -9,16 +9,31 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Isaac Doyle</title>
+    <meta name="description" content="Isaac Doyle — Software Engineering student at McMaster University and Data Analyst at EllisDon. Explore my projects, experience, and resume." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Isaac Doyle — Software Engineering Student" />
+    <meta property="og:description" content="Software Engineering student at McMaster University, currently a Data Analyst at EllisDon. Explore my projects and experience." />
+    <meta property="og:image" content="/myphoto.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Isaac Doyle — Software Engineering Student" />
+    <meta name="twitter:description" content="Software Engineering student at McMaster University, currently a Data Analyst at EllisDon." />
+    <meta name="twitter:image" content="/myphoto.png" />
   </head>
   <body>
     <canvas id="bg"></canvas>
     <nav id="top-nav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
     </nav>
     <div id="social-icons">
+      <a href="mailto:ipdoyle6@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
       <a href="https://www.linkedin.com/in/isaacdoyle/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7 0h4.8v2.2h.07c.67-1.26 2.3-2.6 4.73-2.6C20.6 7.6 22 10.06 22 14.1V24h-5v-8.2c0-2-0.04-4.5-2.75-4.5-2.75 0-3.18 2.15-3.18 4.37V24H7V8z"/>
@@ -50,6 +65,35 @@
           </div>
         </div>
       </section>
+      <section id="experience" class="section experience">
+        <div class="experience-inner">
+          <div class="section-heading">
+            <h2>Experience</h2>
+            <p>Where I've put what I'm learning to work.</p>
+          </div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3>Data Analyst</h3>
+                <div class="experience-company">EllisDon &middot; Mississauga, ON</div>
+              </div>
+              <div class="experience-dates">May – August 2026</div>
+            </div>
+            <ul class="experience-list">
+              <li>Designed interactive dashboards on Microsoft Power BI tracking 15+ KPIs that improved visibility into project performance for clients.</li>
+              <li>Optimized SQL queries to analyze 100,000+ records, enabling data-driven project and operational decision-making.</li>
+              <li>Automated SQL-based reporting workflows, reducing manual reporting effort by 8+ hours per week while improving data accuracy and consistency.</li>
+              <li>Collaborated with stakeholders to translate business requirements into SQL-driven analytics solutions, supporting Power BI dashboards and performance reporting.</li>
+            </ul>
+            <div class="project-tags">
+              <span>Power BI</span>
+              <span>SQL</span>
+              <span>Azure</span>
+              <span>Data Analytics</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="projects" class="section projects">
         <div class="projects-inner">
           <div class="section-heading">
@@ -58,7 +102,9 @@
           </div>
           <div class="project-grid">
             <article class="project-card leafwatch">
-              <div class="project-image" aria-hidden="true">🍃</div>
+              <div class="project-image">
+                <img src="/LeafWatch.png" alt="Leaf-Watch interactive deforestation map screenshot" />
+              </div>
               <div class="project-title">
                 <h3>Leaf-Watch</h3>
                 <a
@@ -87,8 +133,12 @@
               </div>
             </article>
             <article class="project-card atms">
-              <div class="project-image" aria-hidden="true">🌡️</div>
-              <h3>ATMS</h3>
+              <div class="project-image">
+                <img src="/ATMS.png" alt="ATMS thermal management dashboard screenshot" />
+              </div>
+              <div class="project-title">
+                <h3>ATMS</h3>
+              </div>
               <p>
                 ATMS (Automated Thermal Management System) is a real-time hardware-software control system that stabilizes CPU and GPU temperatures using PID control. It integrates embedded C++ on Arduino for sensor data collection and PWM fan control with Python-based data analysis and visualization, achieving a 22% reduction in thermal variance.
               </p>
@@ -103,7 +153,9 @@
               </div>
             </article>
             <article class="project-card rf">
-              <div class="project-image" aria-hidden="true">🧠</div>
+              <div class="project-image">
+                <img src="/MindTrace.png" alt="MindTrace mental health check-in app screenshot" />
+              </div>
               <div class="project-title">
                 <h3>MindTrace</h3>
                 <a
@@ -153,6 +205,10 @@
         </div>
       </section>
     </main>
+    <div id="image-lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close image">&times;</button>
+      <img class="lightbox-img" src="" alt="" />
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -108,6 +108,38 @@ function updateOverlayVisibility() {
   overlay.el.style.opacity = String(1 - t);
 }
 
+/* ===================== Project Image Lightbox ===================== */
+const lightbox = document.getElementById("image-lightbox");
+if (lightbox) {
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+  const closeBtn = lightbox.querySelector(".lightbox-close");
+
+  const openLightbox = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+  };
+
+  document.querySelectorAll(".project-image img").forEach((img) => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+}
+
 /* ===================== Rubik's Cube ===================== */
 const COLORS = {
   R: 0xd32f2f,
